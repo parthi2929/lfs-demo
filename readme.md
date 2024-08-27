@@ -11,15 +11,22 @@ The *.bin files are LFS tracked. The *.txt files are regular files.
 Try out various use cases. 
 
 ## Sample Scenario 1
-you want to pull  only folder B contents and a single specific LFS file, in root say `R_10KiB.bin`. Below commands worked for me.  
+you want to pull  only folder B contents and a single specific LFS file, in root say `R_10KiB.bin`. Below commands worked for me.  I tested it to be working. 
 
 1. Go to a folder where you want to clone this repo
-1. > git clone --no-checkout https://github.com/parthi2929/lfs-demo.git
-1. > cd lfs-demo
-1. > git sparse-checkout init --cone
-1. > git sparse-checkout set B/ R_10KiB.bin
-1. > git checkout master
-1. > ls  
+1. `git clone --no-checkout https://github.com/parthi2929/lfs-demo.git`
+1. `cd lfs-demo`
+1. `git sparse-checkout init --cone`
+1. `git sparse-checkout set B/ R_10KiB.bin`
+1. `git checkout master`
+1. `ls`  
+
+Now change as you need, in your local repo and push as usual. 
+
+1. change
+1. `git add .`
+1. `git commit -m "changed from partial repo"`
+1. `git push origin master`  
 
 
 
